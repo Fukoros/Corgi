@@ -4,3 +4,10 @@ Ontologies Data/LOV/lov.nq.gz
 Ontologies Data/LOV/lov.nq
 Ontologies Data/LOV/all_props_from_LOV.csv
 Ontologies Data/LOV/all_classes.csv
+0. Ontologies Data/LOV/all_classes_from_LOV.csv
+0. Ontologies Data/LOV/all_props_from_LOV.csv
+0. Ontologies Data/LOV/lov.nq
+0. Ontologies Data/LOV/lov.nq.gz
+0. Ontologies Data/LOV/lov_clean.nq
+1. Prepare ontology data/Classes.nt
+1. Prepare ontology data/Properties.nt
