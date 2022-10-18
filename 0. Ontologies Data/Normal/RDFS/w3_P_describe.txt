@@ -1,9 +1,0 @@
-http://www.w3.org/2000/01/rdf-schema#subClassOf	subClassOf	The subject is a subclass of a class.	http://www.w3.org/2000/01/rdf-schema#Class	http://www.w3.org/2000/01/rdf-schema#Class
-http://www.w3.org/2000/01/rdf-schema#subPropertyOf	subPropertyOf	The subject is a subproperty of a property.	http://www.w3.org/1999/02/22-rdf-syntax-ns#Property	http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
-http://www.w3.org/2000/01/rdf-schema#comment	comment	A description of the subject resource.	http://www.w3.org/2000/01/rdf-schema#Resource	http://www.w3.org/2000/01/rdf-schema#Literal
-http://www.w3.org/2000/01/rdf-schema#label	label	A human-readable name for the subject.	http://www.w3.org/2000/01/rdf-schema#Resource	http://www.w3.org/2000/01/rdf-schema#Literal
-http://www.w3.org/2000/01/rdf-schema#domain	domain	A domain of the subject property.	http://www.w3.org/1999/02/22-rdf-syntax-ns#Property	http://www.w3.org/2000/01/rdf-schema#Class
-http://www.w3.org/2000/01/rdf-schema#range	range	A range of the subject property.	http://www.w3.org/1999/02/22-rdf-syntax-ns#Property	http://www.w3.org/2000/01/rdf-schema#Class
-http://www.w3.org/2000/01/rdf-schema#seeAlso	seeAlso	Further information about the subject resource.	http://www.w3.org/2000/01/rdf-schema#Resource	http://www.w3.org/2000/01/rdf-schema#Resource
-http://www.w3.org/2000/01/rdf-schema#isDefinedBy	isDefinedBy	The defininition of the subject resource.	http://www.w3.org/2000/01/rdf-schema#Resource	http://www.w3.org/2000/01/rdf-schema#Resource
-http://www.w3.org/2000/01/rdf-schema#member	member	A member of the subject resource.	http://www.w3.org/2000/01/rdf-schema#Resource	http://www.w3.org/2000/01/rdf-schema#Resource

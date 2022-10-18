@@ -1,0 +1,6 @@
+http://www.w3.org/2000/01/rdf-schema#Resource	Resource	The class resource, everything.
+http://www.w3.org/2000/01/rdf-schema#Class	Class	The class of classes.
+http://www.w3.org/2000/01/rdf-schema#Literal	Literal	The class of literal values, eg. textual strings and integers.
+http://www.w3.org/2000/01/rdf-schema#Container	Container	The class of RDF containers.
+http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty	ContainerMembershipProperty	The class of container membership properties, rdf:_1, rdf:_2, ...,                     all of which are sub-properties of 'member'.
+http://www.w3.org/2000/01/rdf-schema#Datatype	Datatype	The class of RDF datatypes.
