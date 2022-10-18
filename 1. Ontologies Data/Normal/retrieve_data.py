@@ -52,7 +52,7 @@ for folder, file, context in folders.values:
         """
 
     for r in g.query(q):
-        dict_prop[r["prop"].n3()]["label"].add(r["label"].n3())
+        dict_prop[r["prop"].n3()]["label"].add(r["label"])
 
     q = """
         SELECT distinct ?prop ?comment
@@ -69,7 +69,7 @@ for folder, file, context in folders.values:
         }
         """
     for r in g.query(q):
-        dict_prop[r["prop"].n3()]["comment"].add(r["comment"].n3())
+        dict_prop[r["prop"].n3()]["comment"].add(r["comment"])
 
     q = """
         SELECT distinct ?prop ?label ?domain
@@ -129,7 +129,7 @@ for folder, file, context in folders.values:
 
     for r in g.query(q):
 
-        dict_classes[r["class"].n3()] = {"label":{r["label"].n3()}, "comment":set(), "context":context}
+        dict_classes[r["class"].n3()] = {"label":{r["label"]}, "comment":set(), "context":context}
 
     q = """
         SELECT distinct ?class  ?comment
@@ -146,7 +146,7 @@ for folder, file, context in folders.values:
 
     for r in g.query(q):
 
-        dict_classes[r["class"].n3()]["comment"].add(r["comment"].n3())
+        dict_classes[r["class"].n3()]["comment"].add(r["comment"])
 
 
     print("\t", len(dict_classes), "classes found.")
