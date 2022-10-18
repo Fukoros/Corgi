@@ -11,3 +11,5 @@ Ontologies Data/LOV/all_classes.csv
 0. Ontologies Data/LOV/lov_clean.nq
 1. Prepare ontology data/Classes.nt
 1. Prepare ontology data/Properties.nt
+0. Ontologies Data/Special/LOV/lov.nq
+0. Ontologies Data/Special/LOV/lov_clean.nq
