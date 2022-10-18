@@ -8,14 +8,16 @@ def write_property(f, dictionary):
 
         for label in prop_data["label"]:
 
-            label_to_write = label.n3()
-            label_to_write = re.sub("\s", " ", label_to_write)
-            label_to_write = label_to_write.replace('"""','"')
-
+            lang = "en"
             if label._language:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> {label_to_write}.\n')
-            else:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> {label_to_write}@en.\n')
+                lang = label._language
+
+            label_to_write = str(label)
+            label_to_write = re.sub("\s", " ", label_to_write)
+            label_to_write = label_to_write.replace('"',' ')
+            label_to_write = label_to_write.replace('\\',' ')
+
+            f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> "{label_to_write}"@{lang}.\n')
 
         f.write(f'{key} <http://graph/origin> <{prop_data["context"]}>.\n')
 
@@ -25,14 +27,16 @@ def write_property(f, dictionary):
 
         for comment in prop_data["comment"]:
 
-            comment_to_write = comment.n3()
-            comment_to_write = re.sub("\s", " ", comment_to_write)
-            comment_to_write = comment_to_write.replace('"""','"')
-
+            lang = "en"
             if comment._language:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> {comment_to_write}.\n')
-            else:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> {comment_to_write}@en.\n')
+                lang = comment._language
+
+            comment_to_write = str(comment)
+            comment_to_write = re.sub("\s", " ", comment_to_write)
+            comment_to_write = comment_to_write.replace('"',' ')
+            comment_to_write = comment_to_write.replace('\\',' ')
+
+            f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> "{comment_to_write}"@{lang}.\n')
 
         for domain in prop_data["domain"]:
 
@@ -49,14 +53,16 @@ def write_class(f, dictionary):
 
         for label in prop_data["label"]:
 
-            label_to_write = label.n3()
-            label_to_write = re.sub("\s", " ", label_to_write)
-            label_to_write = label_to_write.replace('"""','"')
-
+            lang = "en"
             if label._language:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> {label_to_write}.\n')
-            else:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> {label_to_write}@en.\n')
+                lang = label._language
+
+            label_to_write = str(label)
+            label_to_write = re.sub("\s", " ", label_to_write)
+            label_to_write = label_to_write.replace('"',' ')
+            label_to_write = label_to_write.replace('\\',' ')
+
+            f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> "{label_to_write}"@{lang}.\n')
 
         f.write(f'{key} <http://graph/origin> <{prop_data["context"]}>.\n')
 
@@ -64,11 +70,13 @@ def write_class(f, dictionary):
 
         for comment in prop_data["comment"]:
 
-            comment_to_write = comment.n3()
-            comment_to_write = re.sub("\s", " ", comment_to_write)
-            comment_to_write = comment_to_write.replace('"""','"')
-
+            lang = "en"
             if comment._language:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> {comment_to_write}.\n')
-            else:
-                f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> {comment_to_write}@en.\n')
+                lang = comment._language
+
+            comment_to_write = str(comment)
+            comment_to_write = re.sub("\s", " ", comment_to_write)
+            comment_to_write = comment_to_write.replace('"',' ')
+            comment_to_write = comment_to_write.replace('\\',' ')
+
+            f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#description> "{comment_to_write}"@{lang}.\n')
