@@ -69,7 +69,7 @@ WHERE {
     ?prop rdf:type rdf:Property.
     ?prop <http://graph/origin>  ?ontology.
     ?prop rdfs:label ?label.
-    OPTIONAL{?prop rdfs:comment ?comment}.
+    OPTIONAL{?prop rdfs:description ?comment}.
 }"""
 
 for r in g.query(q):
@@ -133,7 +133,7 @@ SELECT ?prop ?label ?comment
 WHERE {
     ?prop rdf:type rdf:Class.
     ?prop rdfs:label ?label.
-    OPTIONAL{?prop rdfs:comment ?comment}.
+    OPTIONAL{?prop rdfs:description ?comment}.
 }"""
 
 for r in g.query(q):

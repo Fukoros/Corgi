@@ -1,0 +1,8 @@
+Folder_name,File,Context
+DBpedia,onto_db.nt,http://dbpedia.org/ontology/
+FOAF,20140114.rdf,http://xmlns.com/foaf/0.1/
+OWL,owl.ttl,http://www.w3.org/2002/07/owl#
+Purl,dublin_core_terms.ttl,http://purl.org/dc/terms/
+RDF,22-rdf-syntax-ns.ttl,http://www.w3.org/1999/02/22-rdf-syntax-ns#
+RDFS,rdf-schema.ttl,http://www.w3.org/2000/01/rdf-schema#
+Schema,schemaorg-current-https.ttl,https://schema.org/
