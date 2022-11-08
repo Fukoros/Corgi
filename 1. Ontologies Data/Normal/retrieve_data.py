@@ -117,6 +117,21 @@ for folder, file, context in folders.values:
     dict_classes = {}
 
     q = """
+        SELECT distinct ?class
+        WHERE {
+          ?class <http://www.w3.org/2000/01/rdf-schema#label> ?label.
+
+          {?class <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class>}
+          UNION
+          {?class <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class>}
+        }
+        """
+
+    for r in g.query(q):
+
+        dict_classes[r["class"].n3()] = {"label":set(), "comment":set(), "context":context}
+
+    q = """
         SELECT distinct ?class ?label
         WHERE {
           ?class <http://www.w3.org/2000/01/rdf-schema#label> ?label.
@@ -129,7 +144,7 @@ for folder, file, context in folders.values:
 
     for r in g.query(q):
 
-        dict_classes[r["class"].n3()] = {"label":{r["label"]}, "comment":set(), "context":context}
+        dict_classes[r["class"].n3()]["label"].add(r["label"])
 
     q = """
         SELECT distinct ?class  ?comment

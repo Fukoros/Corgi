@@ -19,7 +19,7 @@ def write_property(f, dictionary):
 
             f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> "{label_to_write}"@{lang}.\n')
 
-        f.write(f'{key} <http://graph/origin> <{prop_data["context"]}>.\n')
+        f.write(f'<{prop_data["context"]}> <http://www.w3.org/ns/prov#generated> {key}.\n')
 
         for typ in prop_data["type"]:
             f.write(f'{key} <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> {typ}.\n')
@@ -64,7 +64,7 @@ def write_class(f, dictionary):
 
             f.write(f'{key} <http://www.w3.org/2000/01/rdf-schema#label> "{label_to_write}"@{lang}.\n')
 
-        f.write(f'{key} <http://graph/origin> <{prop_data["context"]}>.\n')
+        f.write(f'<{prop_data["context"]}> <http://www.w3.org/ns/prov#generated> {key}.\n')
 
         f.write(f'{key} <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class>.\n')
 
